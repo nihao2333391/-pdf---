@@ -1,0 +1,16 @@
+textarea.field { max-height: 600rpx; }
+.group-page { padding: 30rpx 36rpx; padding-bottom: calc(24rpx + env(safe-area-inset-bottom)); }
+.group-page .page-title { font-size: 44rpx; margin-bottom: 8rpx; }
+.group-page .eyebrow { margin-bottom: 6rpx; }
+.group-page .muted { font-size: 25rpx; }
+.group-page textarea.field { min-height: 132rpx; padding: 18rpx; }
+.group-page .section-head { margin-bottom: 12rpx; }
+.group-page .section-title { font-size: 32rpx; }
+.group-page button.primary, .group-page button.secondary { min-height: 44px; padding: 14rpx 16rpx; margin-top: 14rpx; font-size: 32rpx; }
+.group-page .note { font-size: 23rpx; margin-top: 10rpx; }
+.group-page .group-actions { margin-top: 24rpx; }
+.group-page .saved { font-size: 23rpx; padding: 18rpx 0; }
+.group-page .danger-link { margin-top: 4rpx; }
+.material-section { padding-top: 24rpx; border-top: 1rpx solid var(--line); margin-top: 28rpx; }
+.material-section .section-title { font-size: 32rpx; }
+.group-page .section { margin-top: 28rpx; }

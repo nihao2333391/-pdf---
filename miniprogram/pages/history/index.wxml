@@ -1,0 +1,21 @@
+<view class="page history-page">
+  <view class="page-title">之前的报销，都在这里。</view>
+  <view class="muted">按创建时间整理，打开后可继续编辑。</view>
+  <view class="history-records">
+  <view wx:if="{{!items.length}}" class="empty section">还没有记录。返回首页，新建一次报销。</view>
+  <block wx:for="{{items}}" wx:key="id">
+    <view wx:if="{{item.showDay}}" class="date-heading">{{item.day}}</view>
+    <button class="history-item" data-id="{{item.id}}" bindtap="open" hover-class="button-pressed">
+      <image class="history-icon" src="/assets/icons/file-text.svg" aria-hidden="true" />
+      <view class="history-copy">
+        <view class="history-title">{{item.title}}</view>
+        <view class="muted">{{item.detail}}</view>
+      </view>
+      <view class="history-time">{{item.time}}</view>
+      <image class="history-arrow" src="/assets/icons/chevron-right.svg" aria-hidden="true" />
+    </button>
+  </block>
+  </view>
+  <view wx:if="{{unreadable}}" class="error">有 {{unreadable}} 条记录暂时无法读取，原材料已保留。请保留应用数据以便恢复。</view>
+  <view class="note history-note">记录保存在这台手机。清理小程序数据或换机可能影响历史记录，请及时导出需要的文件。</view>
+</view>

@@ -1,0 +1,25 @@
+<view class="page report-page">
+  <view class="report-content">
+    <view class="page-title">本次报销</view>
+    <view class="muted">材料按项整理，顺序随时调整</view>
+    <view class="section">
+      <view class="section-head"><text class="section-title">标题</text><text class="muted">选填</text></view>
+      <input class="field" value="{{title}}" maxlength="-1" placeholder="留空时使用创建时间" bindinput="titleInput" disabled="{{busy}}" />
+      <view class="note">创建于 {{created}}</view>
+    </view>
+    <view class="section">
+      <view class="section-head"><text class="section-title">报销项目 · {{rows.length}} 项</text><text class="muted">拖动左侧手柄排序</text></view>
+      <sort-list wx:if="{{rows.length}}" items="{{rows}}" bindselect="edit" bindreorder="sort" />
+      <view wx:else class="empty">从第一项开始，填写描述并添加发票。</view>
+      <button class="secondary" bindtap="add" disabled="{{busy}}" hover-class="button-pressed"><image class="inline-icon" src="/assets/icons/plus.svg" aria-hidden="true" />添加一项</button>
+    </view>
+  </view>
+  <view class="report-footer">
+    <view wx:if="{{error}}" class="error">{{error}}</view>
+    <button class="primary" bindtap="generate" loading="{{busy}}" disabled="{{busy || !rows.length}}" hover-class="button-pressed">{{busy ? '正在生成…' : '生成 PDF 和 Word'}}</button>
+    <view wx:if="{{busy}}" class="note">{{progress}} 请保持页面打开。</view>
+    <view wx:else class="note">每项先放发票，再放附件；每张图片单独一页。</view>
+    <button wx:if="{{hasExport}}" class="secondary" bindtap="result" disabled="{{busy}}" hover-class="button-pressed">{{stale ? '查看上次生成的文件' : '查看已生成的文件'}}</button>
+    <view class="saved"><image wx:if="{{saved === '已保存到本机'}}" class="saved-icon" src="/assets/icons/check.svg" aria-hidden="true" /><text>{{saved}}</text></view>
+  </view>
+</view>

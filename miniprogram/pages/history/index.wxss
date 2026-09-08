@@ -1,0 +1,14 @@
+.history-page { min-height: 100vh; display: flex; flex-direction: column; }
+.history-records { flex: 1; }
+.history-page .page-title { font-size: 44rpx; }
+.date-heading { margin: 36rpx -44rpx 0; padding: 12rpx 44rpx; background: #eee7df; color: #575b5e; font-size: 27rpx; }
+.history-item { display: flex; align-items: center; padding: 30rpx 0; border-radius: 0; border-bottom: 1rpx solid var(--line); background: transparent; width: 100%; text-align: left; color: var(--ink); line-height: 1.5; }
+.history-icon { width: 60rpx; height: 70rpx; margin-right: 20rpx; flex-shrink: 0; }
+.history-copy { flex: 1; min-width: 0; }
+.history-title { font-size: 36rpx; font-weight: 700; margin-bottom: 6rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.history-time { font-size: 27rpx; color: var(--ink); margin-left: 16rpx; flex-shrink: 0; }
+.history-arrow { width: 32rpx; height: 32rpx; margin-left: 18rpx; flex-shrink: 0; }
+.history-note { margin-top: 56rpx; border-top: 1rpx solid var(--line); padding-top: 28rpx; text-align: center; }
+.history-item { min-height: 164rpx; }
+.history-copy .muted { overflow-wrap: break-word; }
+@media (max-width: 350px) { .date-heading { margin-left: -32rpx; margin-right: -32rpx; padding-left: 32rpx; padding-right: 32rpx; } }

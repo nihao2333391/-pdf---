@@ -1,0 +1,21 @@
+{
+  "name": "reimbursement-miniprogram",
+  "version": "0.1.0",
+  "private": true,
+  "description": "微信报销材料整理小程序",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.cjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "miniprogram-api-typings": "5.2.3",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "docxtemplater": "3.69.3",
+    "pdf-lib": "1.17.1",
+    "pizzip": "3.2.0"
+  }
+}

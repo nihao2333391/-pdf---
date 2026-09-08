@@ -1,0 +1,40 @@
+{
+  "description": "报销材料整理小程序：最小工程",
+  "projectname": "reimbursement-miniprogram",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "miniprogram/",
+  "appid": "wxbd86bcc50b9fe393",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "minified": true,
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "useCompilerPlugins": [
+      "typescript"
+    ],
+    "postcss": false,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "condition": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "simulatorPluginLibVersion": {}
+}

@@ -1,0 +1,14 @@
+<scroll-view class="sort-viewport {{compact ? 'sort-viewport--compact' : ''}}" scroll-y="{{from < 0}}" scroll-top="{{scrollTop}}" style="height: {{height}}px" bindscroll="scroll">
+  <view wx:for="{{rows}}" wx:key="id" class="sort-row {{activeId === item.id ? 'sort-row--active' : ''}}" style="height: {{rowHeight}}px">
+    <view class="handle" data-index="{{index}}" catchtouchstart="start" catchtouchmove="move" catchtouchend="end" catchtouchcancel="cancel" catchtap="noop" aria-label="拖拽调整顺序"><image class="handle-icon" src="/assets/icons/grip-vertical.svg" aria-hidden="true" /></view>
+    <view class="content" data-id="{{item.id}}" bindtap="select">
+      <image wx:if="{{item.icon}}" class="material-icon" src="{{item.icon}}" aria-hidden="true" />
+      <view class="row-copy">
+      <view class="title">{{item.title}}</view>
+      <view class="detail">{{item.detail}}</view>
+      </view>
+    </view>
+    <view wx:if="{{removable}}" class="remove" data-id="{{item.id}}" catchtap="remove" aria-label="移除材料"><image class="end-icon" src="/assets/icons/x.svg" aria-hidden="true" /></view>
+    <view wx:else class="arrow" data-id="{{item.id}}" bindtap="select" aria-label="编辑项目"><image class="end-icon" src="/assets/icons/chevron-right.svg" aria-hidden="true" /></view>
+  </view>
+</scroll-view>

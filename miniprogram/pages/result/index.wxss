@@ -1,0 +1,23 @@
+.result-title { font-size: 29rpx; word-break: break-all; }
+.result-page { padding: 34rpx 36rpx; padding-bottom: calc(30rpx + env(safe-area-inset-bottom)); }
+.result-page .page-title { font-size: 44rpx; margin-bottom: 12rpx; }
+.result-page .eyebrow { margin-bottom: 10rpx; }
+.result-page .section-title { font-size: 36rpx; }
+.result-page .document.section { margin-top: 24rpx; }
+.document { display: flex; align-items: center; padding: 32rpx 0; border-bottom: 1rpx solid var(--line); }
+.document-icon { width: 132rpx; height: 176rpx; margin-right: 22rpx; flex-shrink: 0; }
+.document-copy { flex: 1; min-width: 0; }
+.document-copy .muted { font-size: 25rpx; margin-top: 4rpx; }
+.file-actions { display: flex; gap: 14rpx; margin-top: 12rpx; }
+.page .file-actions button { flex: 1; width: auto; min-width: 0; min-height: 44px; margin-top: 0; font-size: 28rpx; padding: 12rpx 6rpx; white-space: nowrap; }
+.range-list { border: 1rpx solid var(--line); border-radius: 10rpx; overflow: hidden; margin-top: 20rpx; }
+.range { display: flex; border-bottom: 1rpx solid var(--line); }
+.range:last-child { border-bottom: 0; }
+.range-pages { flex: 0 0 190rpx; font-size: 27rpx; padding: 22rpx 18rpx; border-right: 1rpx solid var(--line); }
+.description { flex: 1; min-width: 0; padding: 22rpx 18rpx; white-space: pre-wrap; word-break: break-all; font-size: 28rpx; }
+.page .result-back { margin-top: 36rpx; }
+@media (max-width: 350px) {
+  .document-icon { width: 84rpx; margin-right: 14rpx; }
+  .file-actions { gap: 10rpx; }
+  .range-pages { flex-basis: 168rpx; }
+}

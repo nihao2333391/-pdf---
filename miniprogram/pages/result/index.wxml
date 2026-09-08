@@ -1,0 +1,33 @@
+<view class="page result-page" wx:if="{{ready}}">
+  <view class="eyebrow">{{stale ? '上次生成的结果' : '本次生成完成'}}</view>
+  <view class="page-title">材料整理好了。</view>
+  <view class="result-title">{{title}}</view>
+  <view class="note">生成于 {{generated}} · {{ranges.length}} 项，共 {{pageCount}} 页</view>
+  <view wx:if="{{stale}}" class="error">材料已修改。这里保留的是上次生成的文件，返回列表后可重新生成。</view>
+  <view class="document section">
+    <image class="document-icon" src="/assets/icons/file-type-pdf.svg" aria-hidden="true" />
+    <view class="document-copy">
+      <view class="section-title">报销凭证</view>
+      <view class="muted">PDF · 共 {{pageCount}} 页</view>
+      <view class="file-actions"><button class="primary" data-type="pdf" bindtap="open" hover-class="button-pressed">打开查看</button><button class="secondary" data-type="pdf" bindtap="share" hover-class="button-pressed">导出到微信</button></view>
+    </view>
+  </view>
+  <view class="document">
+    <image class="document-icon" src="/assets/icons/file-type-docx.svg" aria-hidden="true" />
+    <view class="document-copy">
+      <view class="section-title">报销内容说明</view>
+      <view class="muted">Word · 原文描述与页码</view>
+      <view class="file-actions"><button class="primary" data-type="docx" bindtap="open" hover-class="button-pressed">打开查看</button><button class="secondary" data-type="docx" bindtap="share" hover-class="button-pressed">导出到微信</button></view>
+    </view>
+  </view>
+  <view class="section">
+    <view class="section-title">页码对应</view>
+    <view class="range-list">
+      <view wx:for="{{ranges}}" wx:key="groupId" class="range">
+        <view class="range-pages">第 {{item.startPage}}{{item.startPage === item.endPage ? '' : '—' + item.endPage}} 页</view>
+        <view class="description">{{item.description}}</view>
+      </view>
+    </view>
+  </view>
+  <button class="secondary result-back" bindtap="back" hover-class="button-pressed">返回继续编辑</button>
+</view>

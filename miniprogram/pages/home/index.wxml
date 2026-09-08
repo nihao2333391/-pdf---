@@ -1,0 +1,21 @@
+<view class="home" style="{{layoutStyle}}">
+  <view class="intro">
+    <image class="intro__art" src="/assets/home-flow.png" mode="scaleToFill" aria-hidden="true" />
+    <view class="intro__copy">
+      <text class="intro__title">我便捷提交，</text>
+      <text class="intro__title">你便捷查看</text>
+      <view class="intro__description"><text>报销内容与凭证页码，</text><text>一份 Word 说明清楚。</text></view>
+    </view>
+  </view>
+  <view class="home__actions">
+    <button class="home-action home-action--create" bindtap="create" hover-class="home-action--pressed" aria-label="新建报销，整理发票与附件">
+      <image class="home-action__coin" src="/assets/icons/coin-yen.svg" mode="aspectFit" aria-hidden="true" />
+      <text class="home-action__title">新建报销</text>
+      <text class="home-action__description">整理发票与附件</text>
+    </button>
+    <button class="home-action home-action--history" bindtap="history" hover-class="home-action--pressed" aria-label="历史记录">
+      <image class="home-action__document" src="/assets/icons/file-text.svg" mode="aspectFit" aria-hidden="true" />
+      <text class="home-action__title">历史记录</text>
+    </button>
+  </view>
+</view>

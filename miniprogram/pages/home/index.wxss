@@ -1,0 +1,17 @@
+.home { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom); }
+.intro { position: relative; height: var(--intro-height, 25vh); min-height: 154px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.intro__art { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.intro__copy { position: relative; padding: 8rpx 0 28rpx; }
+.intro__title { display: block; font-size: 52rpx; font-weight: 600; line-height: 1.4; letter-spacing: 1rpx; }
+.intro__description { margin-top: 18rpx; font-size: 28rpx; line-height: 1.55; }
+.intro__description text { display: block; }
+.home__actions { padding: 0 var(--home-gutter, 6vw); }
+.home button.home-action { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding: 20rpx 24rpx; color: #293c45; border-radius: 24rpx; line-height: 1.5; }
+.home-action--create { height: var(--create-height, 39.78vh); min-height: 190px; background: #fbe2e3; }
+.home-action--history { height: var(--history-height, 22.73vh); min-height: 132px; margin-top: var(--action-gap, 18px); background: #e7dcd1; }
+.home-action--pressed { opacity: .8; }
+.home-action__coin { width: 190rpx; height: 190rpx; max-width: 104px; max-height: 104px; margin-bottom: 20rpx; }
+.home-action__document { width: 140rpx; height: 140rpx; max-width: 72px; max-height: 72px; margin-bottom: 8rpx; }
+.home-action__title { font-size: 42rpx; font-weight: 600; }
+.home-action--history .home-action__title { font-weight: 500; }
+.home-action__description { font-size: 29rpx; margin-top: 6rpx; }

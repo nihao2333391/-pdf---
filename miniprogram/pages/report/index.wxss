@@ -1,0 +1,13 @@
+.report-page { min-height: 100vh; display: flex; flex-direction: column; }
+.report-content { flex: 1; }
+.report-footer { margin-top: 56rpx; }
+.report-footer .note { text-align: center; }
+.report-page { padding: 32rpx 36rpx; padding-bottom: calc(28rpx + env(safe-area-inset-bottom)); }
+.report-page .page-title { font-size: 44rpx; margin-bottom: 8rpx; }
+.report-page .muted { font-size: 25rpx; }
+.report-page .section { margin-top: 30rpx; }
+.report-page .section-title { font-size: 32rpx; }
+.report-page input.field { height: 84rpx; min-height: 44px; padding: 16rpx; }
+.report-page .section + .section { border-top: 1rpx solid var(--line); padding-top: 22rpx; }
+.report-page button.secondary { min-height: 44px; padding: 14rpx; }
+.report-page .saved { padding-top: 36rpx; }

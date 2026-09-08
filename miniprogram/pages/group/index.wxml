@@ -1,0 +1,26 @@
+<view class="page group-page">
+  <view class="eyebrow">第 {{number}} 项</view>
+  <view class="page-title">这一项报销什么？</view>
+  <view class="muted">描述会原样写入 Word，配上对应页码。</view>
+  <view class="section">
+    <view class="section-head"><text class="section-title">项目描述</text><text class="muted">生成前必填</text></view>
+    <textarea class="field" value="{{description}}" maxlength="-1" auto-height cursor-spacing="32" placeholder="填写这一项的报销内容" bindinput="input" disabled="{{busy}}" />
+  </view>
+  <view class="section material-section">
+    <view class="section-head"><text class="section-title">发票</text><text class="muted">PDF 或图片 · 必填</text></view>
+    <sort-list wx:if="{{invoices.length}}" items="{{invoices}}" removable compact data-role="invoiceIds" bindselect="preview" bindreorder="sort" bindremove="remove" />
+    <button class="secondary" data-role="invoiceIds" bindtap="add" disabled="{{busy}}" hover-class="button-pressed"><image class="inline-icon" src="/assets/icons/plus.svg" aria-hidden="true" />添加发票</button>
+  </view>
+  <view class="section material-section">
+    <view class="section-head"><text class="section-title">付款截图／行程单（选填）</text></view>
+    <sort-list wx:if="{{attachments.length}}" items="{{attachments}}" removable compact data-role="attachmentIds" bindselect="preview" bindreorder="sort" bindremove="remove" />
+    <button class="secondary" data-role="attachmentIds" bindtap="add" disabled="{{busy}}" hover-class="button-pressed"><image class="inline-icon" src="/assets/icons/plus.svg" aria-hidden="true" />添加附件</button>
+    <view class="note">可添加多份，拖动左侧手柄调整各栏顺序。</view>
+  </view>
+  <view class="section group-actions">
+    <button class="primary" bindtap="next" disabled="{{busy}}" hover-class="button-pressed">保存并添加下一项</button>
+    <button class="secondary" bindtap="back" disabled="{{busy}}" hover-class="button-pressed">保存并返回列表</button>
+    <view class="saved"><image wx:if="{{saved === '已保存到本机'}}" class="saved-icon" src="/assets/icons/check.svg" aria-hidden="true" /><text>{{saved}} · 未填完整也可保存</text></view>
+    <button class="danger-link" bindtap="removeGroup" disabled="{{busy}}" hover-class="button-pressed">删除这一项</button>
+  </view>
+</view>

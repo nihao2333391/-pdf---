@@ -1,0 +1,11 @@
+{
+  "pages": ["pages/home/index", "pages/report/index", "pages/group/index", "pages/history/index", "pages/result/index"],
+  "window": {
+    "navigationBarTitleText": "报销材料",
+    "navigationBarBackgroundColor": "#faf7f3",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#faf7f3",
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2"
+}
